@@ -1,0 +1,23 @@
+<AuToolbar @border="bottom" @skin="tint" class="au-c-navigation" as |Group|>
+  <Group>
+    <AuTabs @reversed={{this.reversed}} as |Tab|>
+      <Tab>
+        <AuLink @route="processes" @icon="sitemap">
+          Route 1
+        </AuLink>
+      </Tab>
+      <Tab>
+        <AuLink @route="process-steps" @icon="unordered-list">
+          Route 2
+        </AuLink>
+      </Tab>
+    </AuTabs>
+  </Group>
+  {{#if this.currentSession.canEdit}}
+    <Group>
+      <AuLink @route="shared-processes" @skin="button-secondary">
+        Secured route
+      </AuLink>
+    </Group>
+  {{/if}}
+</AuToolbar>
