@@ -2,12 +2,12 @@
   <Group>
     <AuTabs @reversed={{this.reversed}} as |Tab|>
       <Tab>
-        <AuLink @route="processes" @icon="sitemap">
+        <AuLink @route="index" @icon="sitemap">
           Route 1
         </AuLink>
       </Tab>
       <Tab>
-        <AuLink @route="process-steps" @icon="unordered-list">
+        <AuLink @route="index" @icon="unordered-list">
           Route 2
         </AuLink>
       </Tab>
@@ -15,7 +15,7 @@
   </Group>
   {{#if this.currentSession.canEdit}}
     <Group>
-      <AuLink @route="shared-processes" @skin="button-secondary">
+      <AuLink @route="index" @skin="button-secondary">
         Secured route
       </AuLink>
     </Group>

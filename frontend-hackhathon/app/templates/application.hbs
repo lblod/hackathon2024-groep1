@@ -1,8 +1,22 @@
-{{page-title "FrontendHackhathon"}}
+{{page-title
+  (concat
+    "Hackathon 2024"
+    (if this.showEnvironment (concat " - " this.environmentName))
+  )
+}}
 
-{{! The following component displays Ember's default welcome message. }}
-<WelcomePage />
-{{! Feel free to remove this! }}
+<AuModalContainer />
+<AuToaster />
 
-{{outlet}}
-<BasicDropdownWormhole />
+<AuApp>
+  <AppHeader />
+  <main id="main" class="au-c-main-container">
+    <div
+      class="au-c-main-container__content au-c-main-container__content--scroll au-u-flex au-u-flex--column"
+      id="content"
+      tabindex="-1"
+    >
+      {{outlet}}
+    </div>
+  </main>
+</AuApp>

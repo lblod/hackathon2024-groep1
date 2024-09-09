@@ -21,11 +21,14 @@
 // SETTINGS
 @import "@appuniversum/ember-appuniversum/styles";
 /* COMPONENTS */
+@import "components/cards";
+@import "components/sidebar-container";
+@import "components/c-home";
+@import "components/c-navigation";
+@import "components/c-footer";
 @import "shame";
 
 // UTILITIES
-$au-flex-utilities-responsive: true;
-$au-flex-utilities-reverse-responsive-breakpoints: true;
 @import "@appuniversum/ember-appuniversum/styles/a-utilities";
 
 // PLUGINS
