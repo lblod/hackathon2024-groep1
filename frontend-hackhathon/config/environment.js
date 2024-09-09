@@ -18,9 +18,17 @@ module.exports = function (environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
+    appName: 'Hackathon 2024',
+    yasgui: {
+      defaultQuery: '{{YASGUI_DEFAULT_QUERY}}',
+      extraPrefixes: '{{YASGUI_EXTRA_PREFIXES}}',
+    },
   };
 
   if (environment === 'development') {
+    ENV.showAppVersionHash = true;
+    ENV.environmentName = 'development';
+    ENV.environmentTitle = 'ontwikkelomgeving';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
