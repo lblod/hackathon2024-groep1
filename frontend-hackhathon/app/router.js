@@ -1,19 +1,19 @@
 import EmberRouter from '@ember/routing/router';
-import config from 'frontend-hackhathon/config/environment';
+import config from 'frontend-hackathon/config/environment';
 
 export default class Router extends EmberRouter {
   location = config.locationType;
   rootURL = config.rootURL;
 }
 
-Router.map(function () {
+Router.map(function() {
   this.route('mock-login');
-  this.route('auth', { path: '/authorization' }, function () {
+  this.route('auth', { path: '/authorization' }, function() {
     this.route('logout');
   });
   this.route('index', { path: '' });
 
-  this.route('legal', { path: '/legaal' }, function () {
+  this.route('legal', { path: '/legaal' }, function() {
     this.route('disclaimer');
     this.route('cookiestatement', { path: '/cookieverklaring' });
     this.route('accessibilitystatement', {

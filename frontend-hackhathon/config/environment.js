@@ -1,8 +1,8 @@
 'use strict';
 
-module.exports = function (environment) {
+module.exports = function(environment) {
   const ENV = {
-    modulePrefix: 'frontend-hackhathon',
+    modulePrefix: 'frontend-hackathon',
     environment,
     rootURL: '/',
     locationType: 'history',
