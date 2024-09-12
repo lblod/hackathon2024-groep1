@@ -1,5 +1,10 @@
 <LayoutHome>
 
+  <AuContentHeader @titlePartOne="Vlaanderen" @titlePartTwo="is hackaton :)">
+    <img sizes="50vw" src="/assets/images/loket-header-1600.jpg"
+      srcset="/assets/images/loket-header-320.jpg 320w, /assets/images/loket-header-1024.jpg 1024w, /assets/images/loket-header-1600.jpg 1600w"
+      alt="Foto van een laptop met daarop het vlaanderen logo." />
+  </AuContentHeader>
   <AuBodyContainer class="au-u-background-gray-100">
     <section class="c-home">
       <div class="au-o-flow">
@@ -9,58 +14,26 @@
         <div class="au-c-home__form au-o-flow">
           <div class="au-o-grid au-o-grid--small">
             <div class="au-o-grid__item au-u-1-2@medium">
-              <AuCard @flex={{true}} as |c|>
-                <c.header
-                  @badgeSkin="brand"
-                  @badgeIcon="sitemap"
-                  @badgeSize="small"
-                >
-                  <AuHeading @level="2" @skin="4">
-                    First Card
-                  </AuHeading>
-                </c.header>
-                <c.content>
-                  <AuList @divider={{true}} as |Item|>
-                    <Item>Item #1</Item>
-                    <Item>Item #2</Item>
-                  </AuList>
-                </c.content>
-                <c.footer>
-                  <div class="au-u-h-functional au-o-flow au-o-flow--small">
-                    <AuLink @skin="button" @route="index">Link #1</AuLink>
-                    <AuLink @skin="button-secondary" @route="index">Link #2</AuLink>
-                  </div>
-                </c.footer>
-              </AuCard>
+              <img src="/assets/images/undraw_house_searching_re_stk8.svg" alt="oeps" />
             </div>
-            {{#if this.currentSession.canEdit}}
-              <div class="au-o-grid__item au-u-1-2@medium">
-                <AuCard @flex={{true}} as |c|>
-                  <c.header
-                    @badgeSkin="brand"
-                    @badgeIcon="upload"
-                    @badgeSize="small"
-                  >
-                    <AuHeading @level="2" @skin="4">
-                      Authorized access
-                    </AuHeading>
-                  </c.header>
-                  <c.content>
-                    <AuList @divider={{true}} as |Item|>
-                      <Item>Item #1</Item>
-                      <Item>Item #2</Item>
-                    </AuList>
-                  </c.content>
-                  <c.footer>
-                    <div class="au-u-h-functional au-o-flow au-o-flow--small">
-                      <AuLink @skin="button" @route="index">Link #1</AuLink>
-                    </div>
-                  </c.footer>
-                </AuCard>
-              </div>
-            {{/if}}
+            <div class="au-o-grid__item au-u-1-2@medium">
+              <AuHeading @level="2" @skin="4">
+                Somewhere people can request things :)
+              </AuHeading>
+              <p>
+                This doesn’t need to be a separate platform, it can work via e-loket or mijn burgerprofiel... But for
+                the sake of the hackathon it is currently done here!
+              </p>
+              <AuHeading @level="2" @skin="6">
+                First, let’s check if your building in a cultural monument.
+              </AuHeading>
+              <form>
+              <AuLabel for="address">Address</AuLabel>
+              <AuInput id="address" />`
+              <AuButton type="submit">Search</AuButton>
+              </form>
+            </div>
           </div>
-
         </div>
       </div>
     </section>
